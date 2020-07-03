@@ -1,7 +1,7 @@
 # Longevity_Elections
 Analysis of longevity of governors given outcomes of close elections
 
-By **Michael L. Thompson**, July 2, 2020; ([at LinkedIn](www.linkedin.com/in/mlthomps))
+By **Michael L. Thompson**, July 2, 2020; ([at LinkedIn](https://www.linkedin.com/in/mlthomps))
 
 ## INTRODUCTION
 Inspired by Andrew Gelman's July 2, 2020 blog post
