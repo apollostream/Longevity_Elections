@@ -193,7 +193,26 @@ df_rdd2  %>%
   ) %>% {
     ggplot(.,aes(x=death_date_imp)) + 
       geom_histogram(bins=10) + 
-      facet_wrap(~ win + abs_margin,ncol=1)
+      facet_wrap(~ win + abs_margin,ncol=1) +
+      labs(
+        title = "Death Date Distribution by win & margin",
+        subtitle = "Does appear that 'won, 0-1.5%' have later death dates than others."
+      )
+  } %>%
+  print()
+
+df_rdd2  %>% 
+  mutate(
+    win=factor(win,labels=c("lost","won")),
+    abs_margin= factor(abs(margin) > 1.5,labels = c("0-1.5%",">1.5%") )
+  ) %>% {
+    ggplot(.,aes(x=years_after)) + 
+      geom_histogram(bins=10) + 
+      facet_wrap(~ win + abs_margin,ncol=1) +
+      labs(
+        title = "Distribution of Years Lived After Election by win & margin",
+        subtitle = "Does appear that 'won, 0-1.5%' have more years lived after election than others."
+      )
   } %>%
   print()
 
